@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Haven | Digital Library</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <i class="fas fa-book-open"></i>
+                <h1>Book <span>Haven</span></h1>
+            </div>
+            
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#featured">Featured</a></li>
+                    <li><a href="#categories">Categories</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <div class="header-actions">
+                <div class="user-actions">
+                    <a href="#" class="cart-link"><i class="fas fa-shopping-cart"></i></a>
+                    <a href="login.html" class="auth-link login"><i class="fas fa-sign-in-alt"></i> Login</a>
+                    <a href="signup.html" class="auth-link signup"><i class="fas fa-user-plus"></i> Sign Up</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <h2>Discover Your Next Favorite Book</h2>
+            <p>Explore our vast collection of over 100,000 books from classic literature to modern bestsellers. Join our community of avid readers today.</p>
+            <a href="signup.html" class="btn">Get Started</a>
+        </div>
+    </section>
+
+    <!-- Featured Books -->
+    <section class="featured-section" id="featured">
+        <div class="container">
+            <h2 class="section-title">Featured Books This Month</h2>
+            <div class="featured-search">
+                <i class="fas fa-search"></i>
+                <input type="text" id="featuredSearch" placeholder="Search featured books...">
+            </div>
+            <div class="books-grid">
+                <div class="book-card">
+                    <div class="book-cover">
+                        <img src="books/midnight.jpg" alt="The Midnight Library">
+                    </div>
+                    <div class="book-info">
+                        <h3 class="book-title">The Midnight Library</h3>
+                        <p class="book-author">by Matt Haig</p>
+                        <div class="book-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <a href="book-details.html?book=midnight" class="btn view-details">View Details</a>
+                    </div>
+                </div>
+                
+                <div class="book-card">
+                    <div class="book-cover">
+                        <img src="books/klara.jpg" alt="Klara and the Sun">
+                    </div>
+                    <div class="book-info">
+                        <h3 class="book-title">Klara and the Sun</h3>
+                        <p class="book-author">by Kazuo Ishiguro</p>
+                        <div class="book-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                        <a href="book-details.html?book=klara" class="btn view-details">View Details</a>
+                    </div>
+                </div>
+                
+                <div class="book-card">
+                    <div class="book-cover">
+                        <img src="books/four winds.jpg" alt="The Four Winds">
+                    </div>
+                    <div class="book-info">
+                        <h3 class="book-title">The Four Winds</h3>
+                        <p class="book-author">by Kristin Hannah</p>
+                        <div class="book-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <a href="book-details.html?book=fourwinds" class="btn view-details">View Details</a>
+                    </div>
+                </div>
+                
+                <div class="book-card">
+                    <div class="book-cover">
+                        <img src="books/andy weir.jpeg" alt="Project Hail Mary">
+                    </div>
+                    <div class="book-info">
+                        <h3 class="book-title">Project Hail Mary</h3>
+                        <p class="book-author">by Andy Weir</p>
+                        <div class="book-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <a href="book-details.html?book=hailmary" class="btn view-details">View Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories -->
+    <section class="categories-section" id="categories">
+        <div class="container">
+            <h2 class="section-title">Browse by Category</h2>
+            <div class="categories-grid">
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-user-secret"></i>
+                    </div>
+                    <h3>Mystery & Thriller</h3>
+                    <p>Unravel suspenseful stories and thrilling plots</p>
+                </div>
+                
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3>Science Fiction</h3>
+                    <p>Journey to distant galaxies and future worlds</p>
+                </div>
+                
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-history"></i>
+                    </div>
+                    <h3>Historical Fiction</h3>
+                    <p>Experience the past through captivating stories</p>
+                </div>
+                
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Romance</h3>
+                    <p>Fall in love with timeless love stories</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-column">
+                    <h3>Book Haven</h3>
+                    <p>Your gateway to a universe of stories. We're dedicated to bringing the joy of reading to everyone, everywhere.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#featured">Featured Books</a></li>
+                        <li><a href="#categories">Categories</a></li>
+
+                        <li><a href="#about">About Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Customer Service</h3>
+                    <ul>
+                        <li><a href="#">Help & FAQs</a></li>
+                        <li><a href="#">Shipping Policy</a></li>
+                        <li><a href="#">Returns & Exchanges</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Library Street, Bookville</li>
+                        <li><i class="fas fa-phone"></i> (123) 456-7890</li>
+                        <li><i class="fas fa-envelope"></i> info@bookhaven.com</li>
+                        <li><i class="fas fa-clock"></i> Mon-Fri: 9am-6pm</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 Book Haven. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple interactivity for the demo
+        document.addEventListener('DOMContentLoaded', function() {
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    if(targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if(targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+            
+            // Book card hover effects
+            const bookCards = document.querySelectorAll('.book-card');
+            bookCards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-10px)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0)';
+                });
+            });
+            
+            // Search box focus effect
+            const searchInput = document.querySelector('.search-box input');
+            if (searchInput) {
+                searchInput.addEventListener('focus', function() {
+                    this.parentElement.style.boxShadow = '0 0 0 2px rgba(44, 85, 48, 0.2)';
+                    this.parentElement.style.borderRadius = '4px';
+                });
+                
+                searchInput.addEventListener('blur', function() {
+                    this.parentElement.style.boxShadow = 'none';
+                });
+            }
+        });
+
+        // Restrict access to book details if not logged in
+        document.querySelectorAll('.view-details').forEach(function(btn) {
+            btn.addEventListener('click', function(e) {
+                if (!sessionStorage.getItem('isLoggedIn')) {
+                    e.preventDefault();
+                    alert('You must be signed up and logged in to view book details.');
+                    window.location.href = 'login.html';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

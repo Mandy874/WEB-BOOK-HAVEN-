@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Book Haven</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .about-hero {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #1a3d1c 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .about-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        
+        .about-hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+            opacity: 0.9;
+        }
+        
+        .about-content {
+            padding: 60px 0;
+        }
+        
+        .about-section {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+            margin-bottom: 60px;
+        }
+        
+        .about-section:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+        
+        .about-text {
+            flex: 1;
+        }
+        
+        .about-text h2 {
+            color: var(--primary-color);
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+        
+        .about-text p {
+            color: #555;
+            line-height: 1.8;
+        }
+        
+        .about-image {
+            flex: 1;
+            background: var(--gray-color);
+            border-radius: 10px;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            color: var(--primary-color);
+        }
+        
+        .stats-section {
+            background: var(--primary-color);
+            padding: 60px 0;
+            color: white;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            text-align: center;
+        }
+        
+        .stat-item i {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            color: var(--secondary-color);
+        }
+        
+        .stat-item h3 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .stat-item p {
+            opacity: 0.9;
+        }
+        
+        .team-section {
+            padding: 60px 0;
+            background: var(--gray-color);
+        }
+        
+        .team-section h2 {
+            text-align: center;
+            color: var(--primary-color);
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+        }
+        
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+        }
+        
+        .team-member {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: var(--shadow-light);
+            transition: var(--transition-medium);
+        }
+        
+        .team-member:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-medium);
+        }
+        
+        .team-member .avatar {
+            width: 100px;
+            height: 100px;
+            background: var(--primary-color);
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            color: white;
+        }
+        
+        .team-member h4 {
+            color: var(--primary-color);
+            margin-bottom: 5px;
+        }
+        
+        .team-member p {
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        .cta-section {
+            padding: 60px 0;
+            text-align: center;
+        }
+        
+        .cta-section h2 {
+            color: var(--primary-color);
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .cta-section p {
+            color: #666;
+            margin-bottom: 30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        @media (max-width: 768px) {
+            .about-section, .about-section:nth-child(even) {
+                flex-direction: column;
+            }
+            
+            .stats-grid, .team-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <i class="fas fa-book-open"></i>
+                <h1>Book <span>Haven</span></h1>
+            </div>
+            
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#featured">Featured</a></li>
+                    <li><a href="index.html#categories">Categories</a></li>
+
+                    <li><a href="about.html" class="active">About</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <div class="header-actions">
+                <div class="user-actions">
+                    <a href="#" class="cart-link"><i class="fas fa-shopping-cart"></i></a>
+                    <a href="login.html" class="auth-link login"><i class="fas fa-sign-in-alt"></i> Login</a>
+                    <a href="signup.html" class="auth-link signup"><i class="fas fa-user-plus"></i> Sign Up</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="about-hero">
+        <div class="container">
+            <h1>About Book Haven</h1>
+            <p>Your trusted destination for digital literature since 2020. We're passionate about making books accessible to everyone, everywhere.</p>
+        </div>
+    </section>
+
+    <!-- About Content -->
+    <section class="about-content">
+        <div class="container">
+            <div class="about-section">
+                <div class="about-text">
+                    <h2>Our Story</h2>
+                    <p>Book Haven was founded with a simple mission: to make quality literature accessible to readers around the world. What started as a small online bookstore has grown into a comprehensive digital library serving thousands of members.</p>
+                    <br>
+                    <p>We believe that every person deserves access to the transformative power of reading. Whether you're a casual reader or a devoted bibliophile, Book Haven is your home for literary exploration.</p>
+                </div>
+                <div class="about-image">
+                    <i class="fas fa-book-reader"></i>
+                </div>
+            </div>
+            
+            <div class="about-section">
+                <div class="about-text">
+                    <h2>Our Mission</h2>
+                    <p>To democratize access to knowledge and foster a global community of readers through innovative digital solutions. We're committed to curating the finest collection of books while providing an exceptional user experience.</p>
+                    <br>
+                    <p>Our team works tirelessly to discover hidden gems, feature emerging authors, and maintain a diverse collection that reflects the richness of global literature.</p>
+                </div>
+                <div class="about-image">
+                    <i class="fas fa-bullseye"></i>
+                </div>
+            </div>
+            
+            <div class="about-section">
+                <div class="about-text">
+                    <h2>Our Values</h2>
+                    <p><strong>Quality First:</strong> Every book in our collection is carefully selected for its literary merit and reader value.</p>
+                    <br>
+                    <p><strong>Community Driven:</strong> Our readers are at the heart of everything we do. We listen, adapt, and evolve based on your feedback.</p>
+                    <br>
+                    <p><strong>Innovation:</strong> We continuously improve our platform to deliver the best possible reading experience.</p>
+                </div>
+                <div class="about-image">
+                    <i class="fas fa-heart"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <i class="fas fa-book"></i>
+                    <h3>100,000+</h3>
+                    <p>Books Available</p>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-users"></i>
+                    <h3>50,000+</h3>
+                    <p>Active Members</p>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-globe"></i>
+                    <h3>100+</h3>
+                    <p>Countries Served</p>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-star"></i>
+                    <h3>4.9</h3>
+                    <p>User Rating</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team-section">
+        <div class="container">
+            <h2>Meet Our Team</h2>
+            <div class="team-grid">
+                <div class="team-member">
+                    <div class="avatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <h4>Sarah Johnson</h4>
+                    <p>Founder & CEO</p>
+                </div>
+                <div class="team-member">
+                    <div class="avatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <h4>Michael Chen</h4>
+                    <p>Head of Curation</p>
+                </div>
+                <div class="team-member">
+                    <div class="avatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <h4>Emily Davis</h4>
+                    <p>Community Manager</p>
+                </div>
+                <div class="team-member">
+                    <div class="avatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <h4>James Wilson</h4>
+                    <p>Tech Lead</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Join Our Community</h2>
+            <p>Become a member today and unlock access to our vast collection of books, exclusive events, and a community of passionate readers.</p>
+            <a href="signup.html" class="btn">Get Started</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Book Haven</h3>
+                    <p>Your digital library for endless reading adventures.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Connect</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Book Haven. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
